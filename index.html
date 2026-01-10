@@ -3,103 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consumer Shield | The Digital Bodyguard</title>
+    <title>Consumer Shield | Official Beta</title>
     <style>
-        :root { --bg: #020617; --surface: #0f172a; --primary: #3b82f6; --text: #f8fafc; --accent: #22c55e; --coffee: #ffdd00; --risk-red: #ff4d4d; }
-        body { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg); color: var(--text); margin: 0; line-height: 1.6; }
-        .nav { padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #1e293b; }
-        .logo { font-weight: 900; letter-spacing: 2px; color: var(--primary); font-size: 1.2rem; }
-        .hero { padding: 80px 5%; text-align: center; max-width: 900px; margin: 0 auto; }
-        h1 { font-size: 3.5rem; margin-bottom: 20px; line-height: 1.1; }
-        .highlight { color: var(--primary); }
-        .tagline { font-size: 1.25rem; color: #94a3b8; margin-bottom: 40px; }
-        
-        /* CTA BUTTONS */
-        .cta-container { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 20px; }
-        .cta-button { padding: 18px 36px; border-radius: 8px; font-weight: bold; text-decoration: none; font-size: 1.1rem; display: inline-block; transition: all 0.2s; text-align: center; min-width: 220px; }
-        .cta-button:hover { transform: translateY(-2px); filter: brightness(1.1); }
-        .btn-download { background: var(--accent); color: #052e16; box-shadow: 0 0 20px rgba(34, 197, 94, 0.3); }
-        .btn-coffee { background: var(--coffee); color: #451a03; box-shadow: 0 0 20px rgba(255, 221, 0, 0.2); }
-
-        /* LIVE PREVIEW BOX */
-        .demo-box { background: #000; border: 2px solid var(--primary); border-radius: 12px; padding: 25px; margin: 40px auto; max-width: 500px; text-align: left; box-shadow: 0 0 40px rgba(59, 130, 246, 0.15); }
-        .demo-label { font-size: 10px; color: var(--primary); font-weight: 900; text-transform: uppercase; margin-bottom: 15px; display: block; letter-spacing: 1px; }
-        .alert-preview { border-left: 4px solid var(--risk-red); padding-left: 15px; background: rgba(255, 77, 77, 0.05); padding-top: 10px; padding-bottom: 10px; margin-bottom: 15px; }
-        .alert-preview b { color: var(--risk-red); font-size: 12px; text-transform: uppercase; }
-
-        /* FEATURES GRID */
-        .features { padding: 60px 5%; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1100px; margin: 0 auto; }
-        .feature-card { background: var(--surface); padding: 30px; border-radius: 12px; border: 1px solid #1e293b; transition: border-color 0.3s; }
-        .feature-card:hover { border-color: var(--primary); }
-        .feature-card h3 { color: var(--primary); margin-top: 0; font-size: 1.2rem; }
-        
-        /* INSTRUCTIONS */
-        .instruction-box { background: #1e293b; padding: 25px; border-radius: 12px; margin: 40px auto; max-width: 500px; text-align: left; font-size: 14px; border: 1px dashed #334155; }
-        .instruction-box h4 { margin-top: 0; color: var(--primary); text-transform: uppercase; font-size: 12px; }
-        
-        .footer { padding: 60px 5%; text-align: center; color: #475569; font-size: 0.9rem; border-top: 1px solid #1e293b; background: #010409; }
+        body { font-family: sans-serif; background: #020617; color: white; text-align: center; padding: 50px; line-height: 1.6; }
+        .box { max-width: 600px; margin: 0 auto; border: 1px solid #1e293b; padding: 30px; border-radius: 12px; background: #0f172a; }
+        .btn { background: #22c55e; color: #052e16; padding: 20px 40px; text-decoration: none; border-radius: 8px; font-weight: bold; display: inline-block; margin: 25px 0; font-size: 1.2rem; }
+        .coffee { background: #ffdd00; color: #451a03; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 0.9rem; }
+        h1 { color: #3b82f6; }
     </style>
 </head>
 <body>
-    <div class="nav">
-        <div class="logo">🛡️ CONSUMER SHIELD</div>
-        <div style="font-size: 0.8rem; color: #94a3b8; font-weight: bold;">BETA V1.3 LIVE</div>
-    </div>
-
-    <div class="hero">
-        <h1>Stop signing away <br><span class="highlight">your legal rights.</span></h1>
-        <p class="tagline">The average T&C takes 45 minutes to read. Consumer Shield scans them in seconds and flags the traps they don't want you to see.</p>
+    <div class="box">
+        <h1>🛡️ Consumer Shield</h1>
+        <p>The Digital Bodyguard is currently in <b>Beta V1.5.2</b>.</p>
         
-        <div class="demo-box">
-            <span class="demo-label">Live Analysis: Insurance & Airline Beta</span>
-            <div class="alert-preview">
-                <b>Critical: The "Slow Leak" Loophole</b>
-                <p style="font-size: 15px; margin: 8px 0; color: #f1f5f9;"><b>Translation:</b> If your home is damaged by a slow leak, this policy won't pay a penny. They only cover "sudden" explosions.</p>
-            </div>
-            <div class="alert-preview" style="border-left-color: var(--primary);">
-                <b style="color: var(--primary);">Warning: Human Interaction Tax</b>
-                <p style="font-size: 15px; margin: 8px 0; color: #f1f5f9;"><b>Translation:</b> Checking in at the airport is a trap. Do it on the app or they'll charge you £55 at the desk.</p>
-            </div>
-        </div>
+        <a href="https://drive.google.com/file/d/1wpKeacUdbY4ZeKr_nCPDPrGf1ng0yyRn/view?usp=sharing" class="btn">Download Beta ZIP</a>
 
-        <div class="cta-container">
-            <a href="https://drive.google.com/file/d/1wpKeacUdbY4ZeKr_nCPDPrGf1ng0yyRn/view?usp=sharing" class="cta-button btn-download">Download Beta V1.3 (.zip)</a>
-            <a href="https://www.buymeacoffee.com/ConsumerShield" target="_blank" class="cta-button btn-coffee">☕ Support the Mission</a>
+        <p><b>Installation:</b> Unzip the file, go to <code>chrome://extensions</code>, enable Developer Mode, and click <b>Load Unpacked</b>.</p>
+        
+        <div style="margin-top: 40px;">
+            <a href="https://www.buymeacoffee.com/ConsumerShield" target="_blank" class="coffee">☕ Buy me a coffee to keep the sprint going</a>
         </div>
-    </div>
-
-    <div class="features">
-        <div class="feature-card">
-            <h3>Blunt Translations</h3>
-            <p>We turn "Binding Arbitration" and "Class Action Waivers" into "You can't sue us." We tell you exactly what the lawyers are hiding.</p>
-        </div>
-        <div class="feature-card">
-            <h3>Industry-Specific Radar</h3>
-            <p>Custom protection for <b>Insurance, Airlines, Gambling, and Utilities.</b> We find the exit fees and "playthrough" traps instantly.</p>
-        </div>
-        <div class="feature-card">
-            <h3>100% Private</h3>
-            <p>Your data never leaves your machine. This is a local scanner built for people, not a data-mining operation for corporations.</p>
-        </div>
-    </div>
-
-    <div id="setup" style="padding: 60px 5%; text-align: center; background: #010409;">
-        <div class="instruction-box">
-            <h4>How to Install in 60 Seconds</h4>
-            <ol style="padding-left: 20px; color: #cbd5e1; line-height: 2;">
-                <li>Download and <b>Unzip</b> the folder to your Desktop.</li>
-                <li>Open Chrome and go to <code>chrome://extensions</code>.</li>
-                <li>Toggle <b>Developer Mode</b> (top right) to ON.</li>
-                <li>Click <b>Load Unpacked</b> and select the extracted folder.</li>
-                <li>Pin 📌 the Shield to your toolbar.</li>
-            </ol>
-        </div>
-        <p style="color: #475569; font-size: 13px;">Works on Chrome, Brave, Edge, and all Chromium browsers.</p>
-    </div>
-
-    <div class="footer">
-        <p>Built by a founder who got tired of being trapped. Every coffee fuels the sprint.</p>
-        <p style="opacity: 0.5; font-size: 0.7rem;">© 2026 Consumer Shield. Not legal advice. Use responsibly.</p>
     </div>
 </body>
 </html>
