@@ -5,50 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consumer Shield | The Digital Bodyguard</title>
     <style>
-        body { font-family: sans-serif; background: #020617; color: #f8fafc; margin: 0; line-height: 1.6; text-align: center; }
-        .hero { padding: 80px 20px; max-width: 800px; margin: 0 auto; }
-        h1 { font-size: 3rem; margin-bottom: 20px; line-height: 1.1; }
-        .highlight { color: #3b82f6; }
+        :root { --bg: #020617; --surface: #0f172a; --primary: #3b82f6; --text: #f8fafc; --accent: #22c55e; --coffee: #eab308; --risk-red: #ef4444; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); margin: 0; line-height: 1.6; }
+        
+        /* NAVIGATION */
+        .nav { padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #1e293b; }
+        .logo { font-weight: 900; letter-spacing: 1px; color: var(--primary); font-size: 1.2rem; }
+        .version-badge { font-size: 0.75rem; color: #94a3b8; background: #1e293b; padding: 4px 8px; border-radius: 4px; font-weight: bold; }
+
+        /* HERO SECTION */
+        .hero { padding: 80px 5%; text-align: center; max-width: 900px; margin: 0 auto; }
+        h1 { font-size: 3.5rem; margin-bottom: 20px; line-height: 1.1; font-weight: 800; }
+        .highlight { color: var(--primary); }
         .tagline { font-size: 1.25rem; color: #94a3b8; margin-bottom: 40px; }
         
-        .btn { display: inline-block; padding: 15px 30px; border-radius: 8px; font-weight: bold; text-decoration: none; margin: 10px; font-size: 1.1rem; transition: transform 0.2s; }
-        .btn:hover { transform: translateY(-2px); }
-        .btn-dl { background: #22c55e; color: #022c22; box-shadow: 0 0 20px rgba(34,197,94,0.3); }
-        .btn-coffee { background: #eab308; color: #422006; }
+        /* BUTTONS */
+        .cta-container { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 30px; }
+        .cta-button { padding: 16px 32px; border-radius: 8px; font-weight: bold; text-decoration: none; font-size: 1.1rem; transition: transform 0.2s; min-width: 200px; }
+        .cta-button:hover { transform: translateY(-2px); }
+        .btn-download { background: var(--accent); color: #022c22; box-shadow: 0 0 20px rgba(34, 197, 94, 0.2); }
+        .btn-coffee { background: var(--surface); color: var(--coffee); border: 1px solid var(--coffee); }
 
-        .preview { background: #000; border: 1px solid #1e293b; border-radius: 12px; padding: 30px; margin: 50px auto; max-width: 400px; text-align: left; }
-        .alert { border-left: 4px solid #ef4444; padding-left: 15px; margin-bottom: 20px; }
-        .alert b { color: #ef4444; text-transform: uppercase; font-size: 12px; display: block; }
+        /* LIVE PREVIEW BOX */
+        .demo-box { background: #000; border: 1px solid #1e293b; border-radius: 12px; padding: 25px; margin: 50px auto; max-width: 480px; text-align: left; box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
+        .demo-label { font-size: 11px; color: var(--primary); font-weight: 900; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; display: block; }
         
-        .footer { padding: 40px; color: #64748b; font-size: 0.9rem; border-top: 1px solid #1e293b; margin-top: 50px; }
+        .alert-preview { border-left: 4px solid var(--risk-red); padding-left: 15px; margin-bottom: 15px; }
+        .alert-preview b { color: var(--risk-red); font-size: 13px; text-transform: uppercase; display: block; margin-bottom: 5px; }
+        .alert-preview p { font-size: 14px; margin: 0; color: #cbd5e1; }
+
+        /* FEATURES GRID */
+        .features { padding: 60px 5%; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1100px; margin: 0 auto; }
+        .feature-card { background: var(--surface); padding: 30px; border-radius: 12px; border: 1px solid #1e293b; }
+        .feature-card h3 { color: var(--primary); margin-top: 0; font-size: 1.2rem; }
+        .feature-card p { color: #94a3b8; font-size: 0.95rem; }
+
+        /* FOOTER */
+        .footer { padding: 40px 5%; text-align: center; color: #475569; font-size: 0.9rem; border-top: 1px solid #1e293b; margin-top: 40px; }
+        
+        @media (max-width: 600px) { h1 { font-size: 2.5rem; } }
     </style>
 </head>
 <body>
+    <div class="nav">
+        <div class="logo">🛡️ CONSUMER SHIELD</div>
+        <div class="version-badge">BETA V1.8 LIVE</div>
+    </div>
+
     <div class="hero">
         <h1>Stop signing away <br><span class="highlight">your legal rights.</span></h1>
-        <p class="tagline">The browser extension that translates legal jargon into blunt truth. Detecting traps in <b>Casinos, Airlines, and Insurance.</b></p>
+        <p class="tagline">The Digital Bodyguard. We scan the fine print for <b>Retention Traps, Hidden Fees, and Legal Loopholes.</b></p>
         
-        <div>
-            <a href="https://drive.google.com/file/d/1wpKeacUdbY4ZeKr_nCPDPrGf1ng0yyRn/view?usp=sharing" class="btn btn-dl">Download Beta V1.7 (.zip)</a>
-            <a href="https://www.buymeacoffee.com/ConsumerShield" target="_blank" class="btn btn-coffee">☕ Support the Dev</a>
+        <div class="demo-box">
+            <span class="demo-label">Live Analysis Preview</span>
+            <div class="alert-preview">
+                <b>Critical: Hard Cancellation</b>
+                <p>They require you to <b>call them</b> to cancel. This is a deliberate "retention trap" to force you to stay.</p>
+            </div>
+            <div class="alert-preview">
+                <b>Warning: Withdrawal Limit</b>
+                <p>You cannot withdraw less than £100. Your money is effectively locked in their system.</p>
+            </div>
         </div>
 
-        <div class="preview">
-            <div style="color: #3b82f6; font-weight: bold; font-size: 12px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px;">Live Preview</div>
-            <div class="alert">
-                <b>Critical: Withdrawal Lock</b>
-                <p style="margin: 5px 0; color: #cbd5e1;">You cannot withdraw less than £100. Your money is trapped until you hit this limit.</p>
-            </div>
-            <div class="alert">
-                <b>Warning: Dynamic Pricing</b>
-                <p style="margin: 5px 0; color: #cbd5e1;">Prices are rising in real-time because they know you are in the queue.</p>
-            </div>
+        <div class="cta-container">
+            <a href="https://drive.google.com/file/d/1wpKeacUdbY4ZeKr_nCPDPrGf1ng0yyRn/view?usp=sharing" class="cta-button btn-download">Download Beta (.zip)</a>
+            <a href="https://www.buymeacoffee.com/ConsumerShield" target="_blank" class="cta-button btn-coffee">☕ Fuel the Mission</a>
+        </div>
+    </div>
+
+    <div class="features">
+        <div class="feature-card">
+            <h3>Aggressive Scanning</h3>
+            <p>Our V1.8 engine now detects "Phone-to-Cancel" traps and "Auto-Renewal" loops instantly.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Blunt Translation</h3>
+            <p>We turn "Binding Arbitration" into "You can't sue us." No more guessing what the lawyers mean.</p>
+        </div>
+        <div class="feature-card">
+            <h3>100% Private</h3>
+            <p>Your data never leaves your machine. This is a local scanner built for people, not corporations.</p>
         </div>
     </div>
 
     <div class="footer">
-        <p>100% Private. No data leaves your device.</p>
-        <p>© 2026 Consumer Shield Beta.</p>
+        <p>Built by a founder who got tired of being trapped.</p>
+        <p>© 2026 Consumer Shield. Not legal advice. Use responsibly.</p>
     </div>
 </body>
 </html>
